@@ -22,7 +22,9 @@ describe('zodiac routes', () => {
     };
     expect(res.body).toEqual(sign);
   });
+});
 
+describe('horoscope routes', () => {
   it('/horoscopes/:sign should return the horoscope from the sign', async () => {
     const res = await request(app).get('/horoscopes/aquarius');
     const horoscope = {
