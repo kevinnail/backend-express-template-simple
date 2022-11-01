@@ -32,6 +32,6 @@ describe('horoscope routes', () => {
       sign: 'aquarius',
       horoscope: 'You will lose your pants today.',
     };
-    expect(res.body).toEqual(horoscope);
+    expect(res.body).toEqual(horoscope.horoscope);
   });
 });
