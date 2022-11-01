@@ -22,4 +22,14 @@ describe('zodiac routes', () => {
     };
     expect(res.body).toEqual(sign);
   });
+
+  it('/horoscopes/:sign should return the horoscope from the sign', async () => {
+    const res = await request(app).get('/horoscopes/aquarius');
+    const horoscope = {
+      id: '1',
+      sign: 'aquarius',
+      horoscope: 'You will lose your pants today.',
+    };
+    expect(res.body).toEqual(horoscope);
+  });
 });
